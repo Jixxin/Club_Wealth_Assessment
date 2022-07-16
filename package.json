@@ -9,9 +9,9 @@
     "axios": "0.18.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-scripts": "4.0.2"
+    "react-scripts": "4.0.2",
+    "us-state-converter": "^1.0.6"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

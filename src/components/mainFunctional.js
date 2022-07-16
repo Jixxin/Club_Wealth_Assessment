@@ -1,19 +1,35 @@
 import React, { useState } from "react";
-import HomePage from "./pages/homePage"
-import StatePage from "./pages/statePage"
-import NavBar from "./pages/navBar"
+import CovidHomePage from "./pages/covid/CovidHomePage"
+import StatePage from "./pages/covid/StatePage"
+import NavBar from "./pages/NavBar"
+import HomePage from "../components/pages/HomePage"
+import CatsHomePage from "../components/pages/cats/CatsHomePage"
+import ManateeHomePage from "../components/pages/manatee/ManateeHomePage"
+import StarWarsHomePage from "../components/pages/starwars/StarWarsHomePage"
 
 function MainFunctional() {
 
-  const [currentPage, setCurrentPage] = useState("homePage")
+  const [currentPage, setCurrentPage] = useState("HomePage")
   const handlePageChange = (page) => setCurrentPage(page)
 
   const renderPage = () => {
-    if (currentPage === 'homePage') {
-      return <HomePage currentPage={currentPage} handlePageChange={handlePageChange}/>
+    if (currentPage === 'HomePage') {
+      return <HomePage />
     }
-    if (currentPage === 'statePage') {
+    if (currentPage === 'Covid') {
+      return <CovidHomePage currentPage={currentPage} handlePageChange={handlePageChange}/>
+    }
+    if (currentPage === 'StatePage') {
       return <StatePage />
+    }
+    if(currentPage === 'Cats') {
+      return <CatsHomePage />
+    }
+    if(currentPage === 'StarWars') {
+      return <StarWarsHomePage />
+    }
+    if(currentPage === 'Manatee') {
+      return <ManateeHomePage />
     }
   }
 
