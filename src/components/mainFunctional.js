@@ -1,21 +1,27 @@
-import React, { useState, useEffect } from "react";
-import starwars from "../APIs/starwars";
+import React, { useState } from "react";
+import HomePage from "./pages/homePage"
+import StatePage from "./pages/statePage"
+import NavBar from "./pages/navBar"
 
 function MainFunctional() {
-  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    starwars.getPeople().then((response) => {
-      console.log("response", response);
-      setData(response);
-    });
-  }, []);
+  const [currentPage, setCurrentPage] = useState("homePage")
+  const handlePageChange = (page) => setCurrentPage(page)
+
+  const renderPage = () => {
+    if (currentPage === 'homePage') {
+      return <HomePage currentPage={currentPage} handlePageChange={handlePageChange}/>
+    }
+    if (currentPage === 'statePage') {
+      return <StatePage />
+    }
+  }
+
 
   return (
-    <div className="App">
-      {data.map((item, index) => {
-        return <div key={index}>name: {item.name}</div>;
-      })}
+    <div>
+      <NavBar currentPage={currentPage} handlePageChange={handlePageChange}/>   
+      <div> {renderPage()} </div>
     </div>
   );
 }
