@@ -9,7 +9,7 @@ const cats = {
       const response = await axios.get(
         "https://api.thecatapi.com/v1/images/search?limit=100"
       );
-      return response.data.results;
+      return response.data;
     } catch (error) {
       return error;
     }
@@ -19,7 +19,7 @@ const cats = {
       const response = await axios.get(
         "https://api.thecatapi.com/v1/images/search"
       );
-      return response.data.results;
+      return response.data;
     } catch (error) {
       return error;
     }

@@ -4,8 +4,8 @@ import StatePage from "./pages/covid/StatePage"
 import NavBar from "./pages/NavBar"
 import HomePage from "../components/pages/HomePage"
 import CatsHomePage from "../components/pages/cats/CatsHomePage"
-import ManateeHomePage from "../components/pages/manatee/ManateeHomePage"
-import StarWarsHomePage from "../components/pages/starwars/StarWarsHomePage"
+import HundredCatsPage from "../components/pages/cats/HundredCatsPage"
+import RandomCatPage from "../components/pages/cats/RandomCatPage"
 
 function MainFunctional() {
 
@@ -17,19 +17,19 @@ function MainFunctional() {
       return <HomePage />
     }
     if (currentPage === 'Covid') {
-      return <CovidHomePage currentPage={currentPage} handlePageChange={handlePageChange}/>
+      return <CovidHomePage handlePageChange={handlePageChange}/>
     }
     if (currentPage === 'StatePage') {
       return <StatePage />
     }
     if(currentPage === 'Cats') {
-      return <CatsHomePage />
+      return <CatsHomePage handlePageChange={handlePageChange}/>
     }
-    if(currentPage === 'StarWars') {
-      return <StarWarsHomePage />
+    if(currentPage === 'HundredCats') {
+      return <HundredCatsPage />
     }
-    if(currentPage === 'Manatee') {
-      return <ManateeHomePage />
+    if(currentPage === 'RandomCat') {
+      return <RandomCatPage />
     }
   }
 

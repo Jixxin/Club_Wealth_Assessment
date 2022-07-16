@@ -25,32 +25,12 @@ function NavBar({ currentPage, handlePageChange }) {
       </li>
       <li className="nav-item">
         <a
-          href="#starwars"
-          onClick={() => handlePageChange('StarWars')}
-  
-          className={currentPage === 'StarWars' ? 'nav-link active' : 'nav-link'}
-        >
-          Star Wars
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
           href="#cats"
           onClick={() => handlePageChange('Cats')}
   
           className={currentPage === 'Cats' ? 'nav-link active' : 'nav-link'}
         >
           Cat Photos
-        </a>
-      </li>
-      <li className="nav-item">
-        <a
-          href="#manatee"
-          onClick={() => handlePageChange('Manatee')}
-  
-          className={currentPage === 'Manatee' ? 'nav-link active' : 'nav-link'}
-        >
-          Manatee Joke
         </a>
       </li>
     </ul>

@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import covid from "../../APIs/covid";
 import states from "us-state-converter"
 
-function CovidHomePage({ currentPage, handlePageChange }) {
+function CovidHomePage({ handlePageChange }) {
   const [data, setData] = useState([]);
-  const [location, setLocation] = useState([])
   
 
   useEffect(() => {
@@ -13,10 +12,6 @@ function CovidHomePage({ currentPage, handlePageChange }) {
       setData(response);
     });
   }, []);
-
-  useEffect(() => {
-    setLocation(localStorage.getItem("state"))
-  }, [])
 
   const loadStateData = (e) => {
     e.preventDefault()
