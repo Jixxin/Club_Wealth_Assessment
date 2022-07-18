@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import covid from "../../APIs/covid";
 import states from "us-state-converter"
+import './style.css'
 
-function CovidHomePage({ handlePageChange }) {
+function CovidHomePage({ handlePageChange, props }) {
   const [data, setData] = useState([]);
+  const [page, setPage] = useState([]);
   
+
+  useEffect(() => {
+    setPage("one")
+  }, [])
 
   useEffect(() => {
     covid.getCurrentCovidStats().then((response) => {
@@ -23,16 +29,19 @@ function CovidHomePage({ handlePageChange }) {
   }
 
 
-  return (
+return (
     <div>   
-        <div>Click on a State to view each State's covid data</div>
-    <div className="App">
+        <h1>Which State's Data Would You Like To View?</h1>
+       <div id="stateList">
       {data.map((item, index) => {
-        return <a href="" onClick={loadStateData} key={index} id={index}> {states.fullName(item.state)}</a> ;
+        return <ul>
+          <a href="" onClick={loadStateData} key={index} id={index}  className="states">{states.fullName(item.state)}</a>
+          </ul>
       })}
+      </div>
     </div>
-    </div>
-  );
+  )
+
 }
 
 export default CovidHomePage;

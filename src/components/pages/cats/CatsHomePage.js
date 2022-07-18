@@ -1,8 +1,8 @@
 
 function CatsHomePage({ handlePageChange }) {
 
-    const hundredCats = () => {
-        handlePageChange('HundredCats')
+    const MultipleCats = () => {
+        handlePageChange('MultipleCats')
     }
     const randomCat = () => {
         handlePageChange('RandomCat')
@@ -10,8 +10,9 @@ function CatsHomePage({ handlePageChange }) {
 
     return(
         <div>
-            <div>cat home page</div>
-            <button onClick={hundredCats}>100 Cat Photos</button>
+            <h1>Cats</h1>
+            <h3>Which cat content would you prefer?</h3>
+            <button onClick={MultipleCats}>Multiple Cat Photos</button>
             <button onClick={randomCat}>Get Random Cat Photo</button>
         </div>
     )

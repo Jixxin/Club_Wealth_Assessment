@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import CovidHomePage from "./pages/covid/CovidHomePage"
 import StatePage from "./pages/covid/StatePage"
-import NavBar from "./pages/NavBar"
-import HomePage from "../components/pages/HomePage"
+import NavBar from "./pages/navbar/NavBar"
+import HomePage from "../components/pages/homepage/HomePage"
 import CatsHomePage from "../components/pages/cats/CatsHomePage"
-import HundredCatsPage from "../components/pages/cats/HundredCatsPage"
+import MultipleCatsPage from "../components/pages/cats/MultipleCatsPage"
 import RandomCatPage from "../components/pages/cats/RandomCatPage"
 
 function MainFunctional() {
@@ -25,8 +25,8 @@ function MainFunctional() {
     if(currentPage === 'Cats') {
       return <CatsHomePage handlePageChange={handlePageChange}/>
     }
-    if(currentPage === 'HundredCats') {
-      return <HundredCatsPage />
+    if(currentPage === 'MultipleCats') {
+      return <MultipleCatsPage />
     }
     if(currentPage === 'RandomCat') {
       return <RandomCatPage />

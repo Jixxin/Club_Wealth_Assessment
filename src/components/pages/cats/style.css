@@ -1,0 +1,39 @@
+#card {
+    height: 900px;
+    width: 900px;
+}
+
+.container {
+    display: flex;
+    margin: 10px;
+}
+
+#card {
+border: 5px solid black;
+
+}
+
+.buttonContainer {
+    display: block;
+    align-self: center;
+}
+
+#randomCat {
+    align-items: center;
+}
+
+#buttonWrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#imgWrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    justify-content: center;
+}

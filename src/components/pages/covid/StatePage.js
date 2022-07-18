@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import covid from "../../APIs/covid";
+import './style.css'
 
 function StatePage() {
     const [data, setData] = useState([]);
@@ -14,17 +15,15 @@ function StatePage() {
 
 return(
    <div> 
-    <div>{localStorage.getItem("state")} Data</div>
-    <div className="App">
-        <div>Deaths {data.death}</div>
-        <div>Total Hospitalized Paitents {data.hospitalized}</div>
-        <div>Currently Hospitalized Paitents {data.hospitalizedCurrently}</div>
-        <div>Positive Tests {data.positive}</div>
+    <h1>{localStorage.getItem("state")} Data</h1>
+    <div id="covidStats">
+        <div>Deaths: {data.death}</div>
+        <div>Total Hospitalized Paitents: {data.hospitalized}</div>
+        <div>Currently Hospitalized Paitents: {data.hospitalizedCurrently}</div>
+        <div>Positive Tests: {data.positive}</div>
     </div>
     </div>
 )
-
-
 } 
 
 export default StatePage
