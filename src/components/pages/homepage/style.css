@@ -1,8 +1,10 @@
 #wrapper {
-    border: 5px solid black;
+    max-width: 50vw;
     display: flex;
     text-align: center;
     margin: 20px;
+    word-wrap: break-word;
+    padding-left: 25vw;
 }
 
 #title {
